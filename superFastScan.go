@@ -12,7 +12,7 @@ func main() {
 		wg.Add(1)
 		go func(j int) {
 			defer wg.Done()
-			ip := "192.168.50.1" //!!!! Change this to the IP you want to scan
+			ip := "127.0.0.1" //!!!! Change this to the IP you want to scan
 			address := fmt.Sprintf("%s:%d", ip, j)
 			conn, err := net.Dial("tcp", address)
 			if err != nil {
